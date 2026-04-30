@@ -4,38 +4,26 @@
 
 Identify key drivers of customer retention, churn, and revenue using normalized raw database tables.
 
-This project is designed for Data Analyst / Business Analyst portfolios and uses PostgreSQL 17.
+This project uses PostgreSQL 17.
 
 ---
 
-## What This Project Shows
+## What I Built
 
-- Advanced SQL analysis
-- Cohort analysis
-- Customer segmentation
-- Revenue trend analysis
-- Retention and churn analysis
+- End to ennd SQL analysis on customer and transaction data
+- Cohort analysis to track retention over time
+- Customer segmentation using RFM logic
+- Revenue trend and growth analysis
+- Retention and churn identification
+- Support impact analysis on customer behavior
+- Reusable reporting views for business insights
+
+I used:
 - CTEs
 - Window functions
 - Joins
 - Aggregations
-- Reporting views
-
----
-
-## Files
-
-```text
-sql/
-├── 01_schema.sql
-├── 02_insert_sample_data.sql
-├── 03_revenue_analysis.sql
-├── 04_retention_analysis.sql
-├── 05_cohort_analysis.sql
-├── 06_customer_segmentation.sql
-├── 07_support_impact_analysis.sql
-└── 08_views_for_reporting.sql
-```
+- Real-world analytical patterns used in production systems
 
 ---
 
@@ -54,14 +42,14 @@ CREATE DATABASE customer_retention_case_study;
 4. Open each SQL file and run in this exact order:
 
 ```text
-01_schema.sql
-02_insert_sample_data.sql
-08_views_for_reporting.sql
-03_revenue_analysis.sql
-04_retention_analysis.sql
-05_cohort_analysis.sql
-06_customer_segmentation.sql
-07_support_impact_analysis.sql
+schema.sql
+insert_sample_data.sql
+views_for_reporting.sql
+revenue_analysis.sql
+retention_analysis.sql
+cohort_analysis.sql
+customer_segmentation.sql
+support_impact_analysis.sql
 ```
 
 ---
@@ -75,37 +63,27 @@ createdb customer_retention_case_study
 Then run:
 
 ```bash
-psql -d customer_retention_case_study -f sql/01_schema.sql
-psql -d customer_retention_case_study -f sql/02_insert_sample_data.sql
-psql -d customer_retention_case_study -f sql/08_views_for_reporting.sql
-psql -d customer_retention_case_study -f sql/03_revenue_analysis.sql
-psql -d customer_retention_case_study -f sql/04_retention_analysis.sql
-psql -d customer_retention_case_study -f sql/05_cohort_analysis.sql
-psql -d customer_retention_case_study -f sql/06_customer_segmentation.sql
-psql -d customer_retention_case_study -f sql/07_support_impact_analysis.sql
+psql -d customer_retention_case_study -f sql/schema.sql
+psql -d customer_retention_case_study -f sql/insert_sample_data.sql
+psql -d customer_retention_case_study -f sql/views_for_reporting.sql
+psql -d customer_retention_case_study -f sql/revenue_analysis.sql
+psql -d customer_retention_case_study -f sql/retention_analysis.sql
+psql -d customer_retention_case_study -f sql/cohort_analysis.sql
+psql -d customer_retention_case_study -f sql/customer_segmentation.sql
+psql -d customer_retention_case_study -f sql/support_impact_analysis.sql
 ```
 
 If using a username:
 
 ```bash
-psql -U postgres -d customer_retention_case_study -f sql/01_schema.sql
+psql -U postgres -d customer_retention_case_study -f sql/schema.sql
 ```
 
 ---
 
-## Suggested Output Files
+## Output Files
 
-After running queries, export important result tables from pgAdmin as CSV:
-
-```text
-results/
-├── monthly_revenue.csv
-├── acquisition_channel_revenue.csv
-├── customer_retention.csv
-├── cohort_retention.csv
-├── rfm_segmentation.csv
-└── support_impact.csv
-```
+After running queries, export important result tables from pgAdmin as CSV files.
 
 ---
 
@@ -138,13 +116,9 @@ results/
 
 ## Schema Diagram
 
-You can generate a schema diagram using:
+I generated a schema diagram using: dbdiagram.io
 
-- pgAdmin ERD Tool
-- DBeaver ER Diagram
-- dbdiagram.io
-
-Suggested ERD relationship structure:
+ERD relationship structure:
 
 ```text
 customers 1---many orders
@@ -156,13 +130,3 @@ customers 1---many support_tickets
 ```
 
 ---
-
-## Resume Line
-
-Built an advanced SQL analytics case study in PostgreSQL to identify customer retention and revenue drivers using cohort analysis, RFM segmentation, churn detection, CTEs, window functions, and normalized transactional tables.
-
----
-
-## GitHub Description
-
-Advanced PostgreSQL case study analyzing customer retention, revenue trends, churn behavior, cohort performance, RFM segmentation, and support impact using normalized business data and SQL reporting views.
