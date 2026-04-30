@@ -21,11 +21,11 @@ This project uses PostgreSQL 17.
 ##  Technical Architecture & Features
 I engineered a series of analytical pipelines using **PostgreSQL 17** that automate:
 
-* **📈 Revenue Growth Modeling:** Calculation of MoM growth and category-specific performance.
-* **👥 Cohort Retention:** Matrix-style analysis tracking users from their acquisition month.
-* **💎 RFM Segmentation:** (Recency, Frequency, Monetary) logic to rank customer value.
-* **📉 Churn Diagnostics:** Identifying dormant 90+ day users and the "single-order" drop-off.
-* **  Support Sentiment Analysis:** Correlating ticket resolution times with long-term LTV.
+* **Revenue Growth Modeling:** Calculation of MoM growth and category-specific performance.
+* **Cohort Retention:** Matrix-style analysis tracking users from their acquisition month.
+* **RFM Segmentation:** (Recency, Frequency, Monetary) logic to rank customer value.
+* **Churn Diagnostics:** Identifying dormant 90+ day users and the "single-order" drop-off.
+* **Support Sentiment Analysis:** Correlating ticket resolution times with long-term LTV.
 
 ### Advanced SQL Techniques Used:
 * **CTEs & Window Functions:** For running totals, MoM growth percentages, and ranking.
