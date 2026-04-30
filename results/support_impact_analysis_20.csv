@@ -1,0 +1,4 @@
+"support_group","customers","avg_completed_orders","avg_lifetime_value","avg_days_since_last_order","avg_satisfaction_score"
+"Only resolved tickets","197","3.12","3685.14","267.3","3.03"
+"Has unresolved/escalated tickets","76","3.07","3650.95","306.0","3.01"
+"No support tickets","227","2.86","3374.62","292.4",NULL
