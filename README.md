@@ -18,12 +18,20 @@ This project uses PostgreSQL 17.
 - Support impact analysis on customer behavior
 - Reusable reporting views for business insights
 
-I used:
-- CTEs
-- Window functions
-- Joins
-- Aggregations
-- Real-world analytical patterns used in production systems
+##  Technical Architecture & Features
+I engineered a series of analytical pipelines using **PostgreSQL 17** that automate:
+
+* **📈 Revenue Growth Modeling:** Calculation of MoM growth and category-specific performance.
+* **👥 Cohort Retention:** Matrix-style analysis tracking users from their acquisition month.
+* **💎 RFM Segmentation:** (Recency, Frequency, Monetary) logic to rank customer value.
+* **📉 Churn Diagnostics:** Identifying dormant 90+ day users and the "single-order" drop-off.
+* **  Support Sentiment Analysis:** Correlating ticket resolution times with long-term LTV.
+
+### Advanced SQL Techniques Used:
+* **CTEs & Window Functions:** For running totals, MoM growth percentages, and ranking.
+* **Self-Joins:** Used specifically to calculate time-to-next-purchase intervals.
+* **Complex Aggregations:** Pivot-style queries for cohort heatmaps.
+* **Materialized View Logic:** To optimize reporting for business users.
 
 ---
 
